@@ -1,0 +1,21 @@
+{
+    "name": "skais/my-sprint3",
+    "authors": [
+        {
+            "name": "skaistulis",
+            "email": "68568456+skaistulis@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^2.8"
+    },
+    "autoload": {
+        "files": [
+			"src/models/Pages.php"
+			
+		]
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.2"
+    }
+}
