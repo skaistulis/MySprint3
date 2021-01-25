@@ -16,7 +16,6 @@
         $home = strtok($_SERVER["REQUEST_URI"], '?');
         $id = $_GET['p'];
         $pages = $entityManager->find('Pages', $id);
-
         ?>
         <ul class="menu">
             <li><a href="admin.php">Admin</a></li>
@@ -27,15 +26,13 @@
     </header>  
     <section>
     <h1 class="deletePage">Are you sure you want to delete this page?</h1>
-
         <?php echo $pages->getTitle(); 
         echo "<br>";
-         echo $pages->getContent(); ?>
+        echo $pages->getContent(); ?>
 		<br>
         <form action="" method="post">
 		<input type="submit" name="delete" value="Delete" class="button" /></p>
 		</form>
-
         <?php
             // Update
             if(isset($_POST['delete'])){
@@ -43,7 +40,6 @@
                 $entityManager->flush();
                 header('Location: ./admin.php');
             }
-
         ?>
     <section>
 </body>

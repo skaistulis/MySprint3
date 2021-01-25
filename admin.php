@@ -14,17 +14,25 @@
         <?php
         include_once "bootstrap.php";  
         $home = strtok($_SERVER["REQUEST_URI"], '?');
+        if(isset($_GET['logout'])){
+            session_start();
+            unset($_SESSION['username']);
+            unset($_SESSION['password']);
+            unset($_SESSION['logged_in']);
+            header('Location: ./login.php');
+            print('Logged out!');
+        }
         ?>
         <ul class="menu">
             <li><a href="<?php echo $home;?>">Admin</a></li>
             <li><a href="../MySprint3" target="_blank">View Website</a></li>
-            <li><a href="login.php">Logout</a></li>
+            <li><a href="?logout">Logout</a></li>
+            <!-- <li><a href="login.php">Logout</a></li> -->
         </ul>  
         </nav>
     </header>  
     <section>
     <h1 class="manage">Manage Pages</h1>
-
 		<table>
 		<tr>
 			<th><strong>Title</strong></th>
@@ -33,7 +41,6 @@
         <?php
             $pagesRepository = $entityManager->getRepository('Pages');
             $pages = $pagesRepository->findAll();
-
             foreach ($pages as $p) {
                 print('<tr><td>' . $p->getTitle() . '</td>');
             if ($p->getId() == 1){
@@ -44,8 +51,7 @@
                 }
             }
         ?>
-    <button><a class="addButton" href="add.php">ADD new page</a></button>
-    <br>
+    <div class="buttonDiv"><button><a class="addButton" href="add.php">ADD new page</a></button></div>
     <br>
     <section>
 </body>

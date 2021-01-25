@@ -6,7 +6,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="all" href="./css/normalize.css">
     <link rel="stylesheet" type="text/css" media="all" href="./style/style.css">
-
     <title>Document</title>
 </head>
 <body>
@@ -21,11 +20,10 @@
             header('Location: ./admin.php');
         } else $pwmsg = 'You have entered wrong username or password. Please try again.';       
     }
-
 ?>
-
 <form class="loginform" id="login" action="" method="post">
     <h2 class="login">LOGIN</h2>
+    <h3><a href="../MySprint3">Or see main page</a></h3>
     <br>
     <input class="username" type="text" name="username" placeholder="Username (abc)" required>
     <br>

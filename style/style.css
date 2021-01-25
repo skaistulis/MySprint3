@@ -32,36 +32,57 @@ nav {
   text-align: center;
 }
 
+.manage {
+  text-align: center;
+}
+
 /* table  */
 
 table {
   width: 100%;
   border-collapse: collapse;
+
 }
-table th {
+th {
   background-color: #e99898;
-  border: 1px solid #bbbbbb;
   padding: 3px 6px;
 }
-table tr td {
+td {
   border: 1px solid #dddddd;
+  border: none;
   padding: 5px 6px;
+  text-align: center;
 }
-table tr.alt td {
-  background-color: #e2e2e2;
-}
-table tr:hover {
-  background-color: #f0f0f0;
+
+ tr:hover {
+  background-color: rgba(233, 152, 152, 0.30);
   color: #000;
 }
 
 /* table ends  */
 
-/* .title, .manage, .deletePage {
-  text-align: center;
-} */
 
 
 .addButton {
   text-decoration: none;
+  color: black;
+}
+
+.adminButton {
+  right: 30px;
+  position: absolute;
+}
+
+button,
+.button {
+  border: none;
+  background: #e99898;
+  font-size: 20px;
+
+}
+
+.buttonDiv {
+
+
+  text-align: center;
 }

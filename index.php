@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav>
-            <ul class="menu">            
+            <ul class="menu">           
             <?php
             include_once "bootstrap.php";
             $pagesRepository = $entityManager->getRepository('Pages');
@@ -19,7 +19,10 @@
             foreach ($pages as $p) {
                 print('<li><a href="' . '?p=' . $p->getId() . '">' .  $p->getTitle() . '</a></li>');   
             }
-            echo " </ul>"; 
+            ?>
+            <li class="adminButton"><a href="login.php">Admin</a></li>
+            <?php
+            echo "</ul>"; 
             ?>
         </nav>
     </header>  
@@ -29,7 +32,7 @@
         if(!isset($_GET['p'])){
             $pages = $entityManager->find('Pages', 1);
             echo  '<h2 class="title">' . $pages->getTitle() . '</h2>';
-
+            echo '<br>';
             echo $pages->getContent();
         } else {
             $pages = $entityManager->find('Pages', $id);

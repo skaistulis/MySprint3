@@ -14,7 +14,6 @@
         <?php
         include_once "bootstrap.php";  
         $home = strtok($_SERVER["REQUEST_URI"], '?');
-        $id = $_GET['p'];
         ?>
         <ul class="menu">
             <li><a href="admin.php">Admin</a></li>
@@ -28,11 +27,11 @@
         <form action="" method="post">
 		<label>Page title:</label>
         <br> 
-        <input name="title" type="text" value="" size="103" />
+        <input name="title" type="text" value="" size="103" required/>
         <br>
         <label>Page content:</label>
 		<br>
-        <textarea name="content" cols="106" rows="20"></textarea>
+        <textarea name="content" cols="106" rows="20" required></textarea>
 		<br>
 		<input type="submit" name="submit" value="Submit" class="button" /></p>
 		</form>

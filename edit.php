@@ -26,7 +26,6 @@
     </header>  
     <section>
     <h1>Edit Page</h1>
-
         <form action="" method="post">
 		<label>Page title:</label>
         <br> 
@@ -38,8 +37,6 @@
 		<br>
 		<input type="submit" name="submit" value="Submit" class="button" /></p>
 		</form>
-
-
         <?php
             // Update
             if(isset($_POST['submit'])){
